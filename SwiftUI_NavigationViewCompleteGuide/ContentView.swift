@@ -13,7 +13,11 @@ struct ContentView: View {
         NavigationView{
             
             NavigationLink(destination: Text("Second View")) {
-                Text("Hello, World!")
+                Image("MiceCream")
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 100, height: 100)
+                
             }
               
             .navigationBarTitle("Navigation")
