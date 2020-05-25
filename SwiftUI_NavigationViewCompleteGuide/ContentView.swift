@@ -12,17 +12,23 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             
-            NavigationLink(destination: Text("Second View")) {
-                Image("MiceCream")
-                .renderingMode(.original)
-                .resizable()
-                .frame(width: 100, height: 100)
+            VStack(spacing: 30){
+                Text("Do you want to choice Croissant or PanCakes")
+                
+                NavigationLink(destination: ResultView(choice: "PanCakes")) {
+                    Text("you choice PanCakes ")
+                  
+                }
+                NavigationLink(destination: ResultView(choice: "Croissant")) {
+                    Text("you choice Croissant ")
+                }
+                
                 
             }
-              
+                
             .navigationBarTitle("Navigation")
         }
-      
+        
     }
 }
 
