@@ -13,7 +13,6 @@
 		61C0E3FB247C19B300C0BB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C0E3FA247C19B300C0BB26 /* Assets.xcassets */; };
 		61C0E3FE247C19B300C0BB26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C0E3FD247C19B300C0BB26 /* Preview Assets.xcassets */; };
 		61C0E401247C19B300C0BB26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C0E3FF247C19B300C0BB26 /* LaunchScreen.storyboard */; };
-		61C0E409247C21CC00C0BB26 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0E408247C21CC00C0BB26 /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		61C0E3FD247C19B300C0BB26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61C0E400247C19B300C0BB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C0E402247C19B300C0BB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61C0E408247C21CC00C0BB26 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				61C0E3F4247C19AE00C0BB26 /* AppDelegate.swift */,
 				61C0E3F6247C19AE00C0BB26 /* SceneDelegate.swift */,
 				61C0E3F8247C19AE00C0BB26 /* ContentView.swift */,
-				61C0E408247C21CC00C0BB26 /* ResultView.swift */,
 				61C0E3FA247C19B300C0BB26 /* Assets.xcassets */,
 				61C0E3FF247C19B300C0BB26 /* LaunchScreen.storyboard */,
 				61C0E402247C19B300C0BB26 /* Info.plist */,
@@ -150,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C0E3F5247C19AE00C0BB26 /* AppDelegate.swift in Sources */,
-				61C0E409247C21CC00C0BB26 /* ResultView.swift in Sources */,
 				61C0E3F7247C19AE00C0BB26 /* SceneDelegate.swift in Sources */,
 				61C0E3F9247C19AE00C0BB26 /* ContentView.swift in Sources */,
 			);
