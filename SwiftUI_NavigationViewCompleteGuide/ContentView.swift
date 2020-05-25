@@ -11,32 +11,40 @@ import Combine
 
 struct ContentView: View {
     
-    @State private var isShowingDetailView = false
     @ObservedObject var user = User()
+    @State private var result = 0
+    
     
     var body: some View {
         NavigationView{
             
             VStack(spacing: 30){
                 
-                NavigationLink(destination: Text( "Second View"), isActive: $isShowingDetailView ) {EmptyView()}
-                
-                Button("Tap to Show Detail"){
-                    //more code here : network request...
-                    self.isShowingDetailView = true
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        self.isShowingDetailView = false
-                    }
-                }
-                
                 Text( "Score: \(user.score)")
-                 NavigationLink(destination: ChangeView()) {
+                NavigationLink(destination: ChangeView()) {
                     Text( "Show Detail Second View")
                 }
-               
+                
+                Text("Result: \(result)")
+                
             }
             .navigationBarTitle("Navigation")
+            .navigationBarItems(
+                leading:
+                Button("Substract 1"){
+                    self.result -= 1
+                },
+                trailing:
+                
+                HStack {
+                    Button("Add 1"){
+                        self.result += 1
+                    }
+                    Button("Multiply 2"){
+                        self.result *= 2
+                    }
+                }
+            )
         }.environmentObject(user)
     }
 }
