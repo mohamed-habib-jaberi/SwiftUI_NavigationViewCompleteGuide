@@ -13,12 +13,17 @@ struct ContentView: View {
     
     @ObservedObject var user = User()
     @State private var result = 0
+    @State private var fullScreen = false
     
     
     var body: some View {
         NavigationView{
             
             VStack(spacing: 30){
+                
+                Button("Toggle full screen"){
+                    self.fullScreen.toggle()
+                }
                 
                 Text( "Score: \(user.score)")
                 NavigationLink(destination: ChangeView()) {
@@ -28,7 +33,8 @@ struct ContentView: View {
                 Text("Result: \(result)")
                 
             }
-            .navigationBarTitle("Navigation")
+            .navigationBarTitle("Full Screen")
+            .navigationBarHidden(fullScreen)
             .navigationBarItems(
                 leading:
                 Button("Substract 1"){
@@ -45,7 +51,10 @@ struct ContentView: View {
                     }
                 }
             )
-        }.environmentObject(user)
+        }
+        .environmentObject(user)
+        .statusBar(hidden: fullScreen)
+        
     }
 }
 
