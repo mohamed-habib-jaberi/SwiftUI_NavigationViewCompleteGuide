@@ -7,10 +7,12 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     
     @State private var isShowingDetailView = false
+    @ObservedObject var user = User()
     
     var body: some View {
         NavigationView{
@@ -27,9 +29,15 @@ struct ContentView: View {
                         self.isShowingDetailView = false
                     }
                 }
+                
+                Text( "Score: \(user.score)")
+                 NavigationLink(destination: ChangeView()) {
+                    Text( "Show Detail Second View")
+                }
+               
             }
             .navigationBarTitle("Navigation")
-        }
+        }.environmentObject(user)
     }
 }
 
