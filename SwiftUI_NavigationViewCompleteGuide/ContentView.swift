@@ -10,18 +10,26 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isShowingDetailView = false
+    @State private var selection : String? = nil
     
     var body: some View {
         NavigationView{
             
             VStack(spacing: 30){
                 
-                NavigationLink(destination: Text( "Second View"), isActive: $isShowingDetailView ) {EmptyView()}
+                NavigationLink(destination: Text( "Second View"),tag: "SecondView", selection: $selection ) {EmptyView()}
                 
-                Button("Tap to Show Detail"){
+                NavigationLink(destination: Text("Third View"), tag: "ThirdView", selection: $selection) {
+                    EmptyView()
+                }
+                
+                Button("Tap to Show Second"){
                     //more code here : network request...
-                    self.isShowingDetailView = true
+                    self.selection = "SecondView"
+                }
+                Button("Tap to Show Third"){
+                    //more code here : network request...
+                    self.selection = "ThirdView"
                 }
             }
             .navigationBarTitle("Navigation")
