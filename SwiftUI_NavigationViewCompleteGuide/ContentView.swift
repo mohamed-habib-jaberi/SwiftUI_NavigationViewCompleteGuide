@@ -21,6 +21,11 @@ struct ContentView: View {
             
             VStack(spacing: 30){
                 
+                Text("Primary")
+                    .font(Font.system(size: 25, weight: .bold, design: .rounded))
+                Text("Secondary")
+                                  .font(Font.system(size: 25, weight: .bold, design: .rounded))
+                
                 Button("Toggle full screen"){
                     self.fullScreen.toggle()
                 }
@@ -33,7 +38,7 @@ struct ContentView: View {
                 Text("Result: \(result)")
                 
             }
-            .navigationBarTitle("Full Screen")
+            .navigationBarTitle("Primary")
             .navigationBarHidden(fullScreen)
             .navigationBarItems(
                 leading:
@@ -54,7 +59,8 @@ struct ContentView: View {
         }
         .environmentObject(user)
         .statusBar(hidden: fullScreen)
-        
+            //show single view at the time in portrait and landscape mode
+    .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
